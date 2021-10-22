@@ -1,10 +1,15 @@
 import React from "react";
 import "./App.css";
+
 // Import Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 // Import Header Component
 import { Header } from "./Components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// Import Footer and FooterStyles Components
+import Footer from "./Components/Footer";
+// Import Register
+import { Register } from "./Components/Register";
 
 function App() {
   return (
@@ -16,9 +21,12 @@ function App() {
         <Switch>
           <Route path="/" component="" exact></Route>
           <Route path="/About" component="" exact></Route>
-          <Route path="/Insert" component="" exact></Route>
+
+          <Route path="/Register" component={Register} exact></Route>
+          {/* <Route path="/Login" component={Login} exact></Route> */}
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }

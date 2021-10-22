@@ -21,28 +21,9 @@ export class Header extends React.Component {
               <Nav className="mx-2" style={{ maxHeight: "300px" }} navbarScroll>
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/About">About</Nav.Link>
-                <Nav.Link href="/Insert">Insert</Nav.Link>
-                {/* Dropdown for Employees */}
-                <NavDropdown title="Employees" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3"></NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Search Jobs
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
-                {/* Fropdown for Employers */}
-                <NavDropdown title="Employers" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3"></NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">Post Jobs</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
-                {/* Login/Register links */}
+                <Nav.Link href="/Employees">Employees</Nav.Link>
+                <Nav.Link href="/Employers">Employers</Nav.Link>
+
                 <Nav.Link href="/Register">Register</Nav.Link>
                 <Nav.Link href="/Login">Login</Nav.Link>
               </Nav>
