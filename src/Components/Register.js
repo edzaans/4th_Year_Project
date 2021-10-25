@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
+import Styles from "../Styles.css";
 
 export class Register extends React.Component {
   constructor() {

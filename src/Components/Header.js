@@ -8,12 +8,13 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
+import Styles from "../Styles/Header.module.css";
 
 export class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar bg="primary" variant="dark" className="px-2" expand="md">
+        <Navbar className={Styles.test} expand="md">
           <Container fluid>
             <Navbar.Brand href="#home">Logo</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />

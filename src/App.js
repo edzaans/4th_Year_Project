@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-
 // Import Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 // Import Header Component
@@ -10,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 // Import Register
 import { Register } from "./Components/Register";
+import { Slide } from "./Components/Slide";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
           {/* <Route path="/Login" component={Login} exact></Route> */}
         </Switch>
       </div>
+      <Slide />
       <Footer />
     </Router>
   );

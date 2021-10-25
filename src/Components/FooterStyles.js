@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Box = styled.div`
   padding: 20px 20px;
-  background: gray;
-  margin-top: 20px;
+  background-color: #181818;
   width: 100%;
   @media (max-width: 1000px) {
     padding: 10px 10px;
@@ -40,7 +39,7 @@ export const FooterLink = styled.a`
 `;
 
 export const Heading = styled.p`
-  font-size: 20px;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #f5d10d;
   font-weight: bold;
 `;

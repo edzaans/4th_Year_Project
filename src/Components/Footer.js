@@ -1,4 +1,6 @@
 import React from "react";
+
+// Import Style components
 import {
   Box,
   Container,
@@ -7,6 +9,18 @@ import {
   FooterLink,
   Heading,
 } from "./FooterStyles";
+
+// Import Icon name to be used ( use as a component in code )
+import { FaFacebookSquare } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { AiFillTwitterSquare } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+
+// Declare Icon styles here
+const fbIcon = { color: "blue", fontSize: "1.5rem" };
+const instaIcon = { color: "yellow", fontSize: "1.5rem" };
+const twitterIcon = { color: "aqua", fontSize: "1.5rem" };
+const youtubeIcon = { color: "red", fontSize: "1.5rem" };
 
 const Footer = () => {
   return (
@@ -21,38 +35,49 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
-            <FooterLink href="#">Teaching</FooterLink>
+            <FooterLink href="#">Delivery</FooterLink>
+            <FooterLink href="#">Packaging</FooterLink>
+            <FooterLink href="#">Management</FooterLink>
+            <FooterLink href="#">Tracking</FooterLink>
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">Uttar Pradesh</FooterLink>
-            <FooterLink href="#">Ahemdabad</FooterLink>
-            <FooterLink href="#">Indore</FooterLink>
-            <FooterLink href="#">Mumbai</FooterLink>
+            <FooterLink href="#">roade@support.ie</FooterLink>
+            <FooterLink href="#">+353 9100000</FooterLink>
+            <FooterLink href="#">www.roade.ie</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
             <FooterLink href="#">
-              <i className="fab fa-facebook-f">
-                <span style={{ marginLeft: "10px" }}>Facebook</span>
+              <i>
+                <span style={{ marginLeft: "10px" }}>
+                  <FaFacebookSquare style={fbIcon} />
+                  Facebook
+                </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
-              <i className="fab fa-instagram">
-                <span style={{ marginLeft: "10px" }}>Instagram</span>
+              <i>
+                <span style={{ marginLeft: "10px" }}>
+                  <AiFillInstagram style={instaIcon} />
+                  Instagram
+                </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
-              <i className="fab fa-twitter">
-                <span style={{ marginLeft: "10px" }}>Twitter</span>
+              <i>
+                <span style={{ marginLeft: "10px" }}>
+                  <AiFillTwitterSquare style={twitterIcon} />
+                  Twitter
+                </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
-              <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" }}>Youtube</span>
+              <i>
+                <span style={{ marginLeft: "10px" }}>
+                  <AiFillYoutube style={youtubeIcon} />
+                  Youtube
+                </span>
               </i>
             </FooterLink>
           </Column>
