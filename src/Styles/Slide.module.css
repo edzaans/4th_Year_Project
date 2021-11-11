@@ -2,3 +2,7 @@
   height: 500px;
   width: 100%;
 }
+
+.overlay {
+  background-color: rgba(141, 135, 135, 0.493);
+}

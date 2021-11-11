@@ -12,6 +12,7 @@ import Footer from "./Components/Footer";
 import { Register } from "./Components/Register";
 import { Slide } from "./Components/Slide";
 import { Cards } from "./Components/Cards";
+import { Quote } from "./Components/Quote";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         </Switch>
       </div>
       <Slide />
-
+      <Quote />
       <Cards />
       <Footer />
     </Router>

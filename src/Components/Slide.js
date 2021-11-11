@@ -20,8 +20,14 @@ export class Slide extends React.Component {
               fluid
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <div className={Styles.overlay}>
+                {" "}
+                <h3>WE HELP YOU TO REALISE YOUR BUSINESS GOALS</h3>
+                <p>
+                  Some text .....Some text .....Some text .....Some text
+                  .....Some text .....
+                </p>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -33,8 +39,14 @@ export class Slide extends React.Component {
             />
 
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div className={Styles.overlay}>
+                {" "}
+                <h3>WE HELP YOU TO REALISE YOUR BUSINESS GOALS</h3>
+                <p>
+                  Some text .....Some text .....Some text .....Some text
+                  .....Some text .....
+                </p>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -46,14 +58,17 @@ export class Slide extends React.Component {
             />
 
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <div className={Styles.overlay}>
+                {" "}
+                <h3>WE HELP YOU TO REALISE YOUR BUSINESS GOALS</h3>
+                <p>
+                  Some text .....Some text .....Some text .....Some text
+                  .....Some text .....
+                </p>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        v
       </div>
     );
   }

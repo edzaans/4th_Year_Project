@@ -10,13 +10,18 @@ import {
 } from "react-bootstrap";
 import Styles from "../Styles/Header.module.css";
 
+// mport Assets
+const logo = require("../Assets/Logo3.png");
+
 export class Header extends React.Component {
   render() {
     return (
       <div>
         <Navbar className={Styles.test} expand="md">
           <Container fluid>
-            <Navbar.Brand href="#home">Logo</Navbar.Brand>
+            <Navbar.Brand href="#">
+              <img alt="" src={logo.default} width="100" height="40"></img>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav className="mx-2" style={{ maxHeight: "300px" }} navbarScroll>
