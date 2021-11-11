@@ -1,0 +1,24 @@
+.container {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  background-color: aqua;
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.input {
+  margin: 10px auto;
+  width: 50%;
+  border-radius: 1px;
+}
+
+.btn {
+  margin: 10px auto;
+  width: 50%;
+  background-color: green;
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+}

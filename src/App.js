@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./App.css";
 // Import Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,6 +11,7 @@ import Footer from "./Components/Footer";
 // Import Register
 import { Register } from "./Components/Register";
 import { Slide } from "./Components/Slide";
+import { Cards } from "./Components/Cards";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         </Switch>
       </div>
       <Slide />
+
+      <Cards />
       <Footer />
     </Router>
   );

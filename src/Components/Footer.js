@@ -17,10 +17,17 @@ import { AiFillTwitterSquare } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
 
 // Declare Icon styles here
-const fbIcon = { color: "blue", fontSize: "1.5rem" };
+const fbIcon = { color: "#4267B2", fontSize: "1.5rem" };
 const instaIcon = { color: "yellow", fontSize: "1.5rem" };
 const twitterIcon = { color: "aqua", fontSize: "1.5rem" };
 const youtubeIcon = { color: "red", fontSize: "1.5rem" };
+
+// Importing assets
+
+const fb2_3d = require("../Assets/facebook_logo2_gif.gif");
+const twitter_3d = require("../Assets/twitter_logo_web.gif");
+const insta_3d = require("../Assets/insta_logo_gif.gif");
+const youtube_3d = require("../Assets/YouTube_logo_gif.gif");
 
 const Footer = () => {
   return (
@@ -51,32 +58,48 @@ const Footer = () => {
             <FooterLink href="#">
               <i>
                 <span style={{ marginLeft: "10px" }}>
-                  <FaFacebookSquare style={fbIcon} />
-                  Facebook
+                  <img
+                    src={fb2_3d.default}
+                    alt="FB gif"
+                    width="80"
+                    height="75"
+                  />
                 </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
               <i>
                 <span style={{ marginLeft: "10px" }}>
-                  <AiFillInstagram style={instaIcon} />
-                  Instagram
+                  <img
+                    src={insta_3d.default}
+                    alt="Twitter gif"
+                    width="100"
+                    height="75"
+                  />
                 </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
               <i>
                 <span style={{ marginLeft: "10px" }}>
-                  <AiFillTwitterSquare style={twitterIcon} />
-                  Twitter
+                  <img
+                    src={twitter_3d.default}
+                    alt="Twitter gif"
+                    width="100"
+                    height="75"
+                  />
                 </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
               <i>
                 <span style={{ marginLeft: "10px" }}>
-                  <AiFillYoutube style={youtubeIcon} />
-                  Youtube
+                  <img
+                    src={youtube_3d.default}
+                    alt="Twitter gif"
+                    width="100"
+                    height="75"
+                  />
                 </span>
               </i>
             </FooterLink>
