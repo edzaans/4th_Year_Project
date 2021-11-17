@@ -52,6 +52,7 @@ function UserForm() {
             <Form.Label>First name</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Your first name"
               onChange={(event) => {
                 setname(event.target.value);
@@ -64,6 +65,7 @@ function UserForm() {
             <Form.Label>Last name</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Your last name"
               onChange={(event) => {
                 setlname(event.target.value);
@@ -76,6 +78,7 @@ function UserForm() {
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
+              required
               placeholder="name@example.com"
               onChange={(event) => {
                 setemail(event.target.value);
@@ -88,6 +91,7 @@ function UserForm() {
             <Form.Label>Your location</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Your location"
               onChange={(event) => {
                 setlocation(event.target.value);
@@ -100,6 +104,7 @@ function UserForm() {
             <Form.Label>Category held</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Licence Category held"
               onChange={(event) => {
                 setlicence_cat(event.target.value);
@@ -112,6 +117,7 @@ function UserForm() {
             <Form.Label>Qualifications held</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Qualifications held"
               onChange={(event) => {
                 setqualifications(event.target.value);
@@ -124,6 +130,7 @@ function UserForm() {
             <Form.Label>Penalty Points</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Penalty points"
               onChange={(event) => {
                 setpenalty_points(event.target.value);
@@ -136,6 +143,7 @@ function UserForm() {
             <Form.Label>Your experience</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Your experience"
               onChange={(event) => {
                 setexperience_years(event.target.value);
@@ -148,6 +156,7 @@ function UserForm() {
             <Form.Label>What work type youre looking for?</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Choose work type"
               onChange={(event) => {
                 setwork_type(event.target.value);
@@ -160,6 +169,7 @@ function UserForm() {
             <Form.Label>Availability</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Availability"
               onChange={(event) => {
                 setavailable(event.target.value);
