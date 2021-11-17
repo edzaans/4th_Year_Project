@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from "react";
+/* import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 import Styles from "../Styles/Form.module.css";
+
+// Import React Bootstrap
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 
 function Form() {
   const [name, setname] = useState("");
@@ -66,3 +70,4 @@ function Form() {
   );
 }
 export default Form;
+ */

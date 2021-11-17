@@ -1,5 +1,7 @@
 import React from "react";
+// Working Testing form
 import Form from "./Form";
+import RegistrationForm from "./RegistrationForm";
 
 /* import { Form, Button, Container } from "react-bootstrap";
 import Styles from "../Styles.css";
@@ -11,8 +13,7 @@ export class Register extends React.Component {
   render() {
     return (
       <div>
-        Register component
-        <Form />
+        <RegistrationForm />
       </div>
     );
   }

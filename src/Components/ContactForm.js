@@ -6,40 +6,42 @@ export class ContactForm extends React.Component {
     return (
       <div>
         <div class="container">
-          <div class=" text-center mt-5 "></div>
+          <div class=" text-center mt-3"></div>
           <div class="row ">
             <div class="col-lg-12 mx-auto">
-              <div class="card mt-2 mx-auto p-4 bg-light">
+              <div class="card  mx-auto p-2 bg-light">
                 <div class="card-body bg-light">
                   <div class="container">
                     <form id="contact-form" role="form">
                       <div class="controls">
                         <div class="row">
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                             <div class="form-group">
                               {" "}
-                              <label for="form_name">Firstname *</label>{" "}
+                              <label for="form_name">First Name *</label>{" "}
                               <input
                                 id="form_name"
                                 type="text"
                                 name="name"
                                 class="form-control"
-                                placeholder="Please enter your firstname *"
+                                placeholder="Please enter your first name"
                                 required="required"
                                 data-error="Firstname is required."
                               />{" "}
                             </div>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                             <div class="form-group">
                               {" "}
-                              <label for="form_lastname">Lastname *</label>{" "}
+                              <label for="form_lastname">
+                                Last Name *
+                              </label>{" "}
                               <input
                                 id="form_lastname"
                                 type="text"
                                 name="surname"
                                 class="form-control"
-                                placeholder="Please enter your lastname *"
+                                placeholder="Please enter your last name"
                                 required="required"
                                 data-error="Lastname is required."
                               />{" "}
@@ -47,7 +49,7 @@ export class ContactForm extends React.Component {
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                             <div class="form-group">
                               {" "}
                               <label for="form_email">Email *</label>{" "}
@@ -56,13 +58,13 @@ export class ContactForm extends React.Component {
                                 type="email"
                                 name="email"
                                 class="form-control"
-                                placeholder="Please enter your email *"
+                                placeholder="Please enter your email "
                                 required="required"
                                 data-error="Valid email is required."
                               />{" "}
                             </div>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                             <div class="form-group">
                               {" "}
                               <label for="form_need">
@@ -106,7 +108,7 @@ export class ContactForm extends React.Component {
                             {" "}
                             <input
                               type="submit"
-                              class="btn btn-success btn-send pt-2 btn-block "
+                              class="btn btn-success btn-send mt-3 btn-block "
                               value="Send Message"
                             />{" "}
                           </div>
