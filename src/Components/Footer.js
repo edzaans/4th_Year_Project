@@ -53,56 +53,73 @@ const Footer = () => {
             <FooterLink href="#">+353 9100000</FooterLink>
             <FooterLink href="#">www.roade.ie</FooterLink>
           </Column>
+
           <Column>
             <Heading>Social Media</Heading>
-            <FooterLink href="#">
-              <i>
-                <span style={{ marginLeft: "10px" }}>
-                  <img
-                    src={fb2_3d.default}
-                    alt="FB gif"
-                    width="80"
-                    height="75"
-                  />
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i>
-                <span style={{ marginLeft: "10px" }}>
-                  <img
-                    src={insta_3d.default}
-                    alt="Twitter gif"
-                    width="100"
-                    height="75"
-                  />
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i>
-                <span style={{ marginLeft: "10px" }}>
-                  <img
-                    src={twitter_3d.default}
-                    alt="Twitter gif"
-                    width="100"
-                    height="75"
-                  />
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i>
-                <span style={{ marginLeft: "10px" }}>
-                  <img
-                    src={youtube_3d.default}
-                    alt="Twitter gif"
-                    width="100"
-                    height="75"
-                  />
-                </span>
-              </i>
-            </FooterLink>
+            <Row>
+              <Column>
+                {" "}
+                <FooterLink href="#">
+                  <i>
+                    <span style={{ marginLeft: "10px" }}>
+                      <img
+                        src={fb2_3d.default}
+                        alt="FB gif"
+                        width="50"
+                        height="50"
+                      />
+                    </span>
+                  </i>
+                </FooterLink>
+              </Column>
+              <Column>
+                {" "}
+                <FooterLink href="#">
+                  <i>
+                    <span style={{ marginLeft: "10px" }}>
+                      <img
+                        src={insta_3d.default}
+                        alt="Twitter gif"
+                        width="50"
+                        height="50"
+                      />
+                    </span>
+                  </i>
+                </FooterLink>
+              </Column>
+            </Row>
+            <Row>
+              <Column>
+                {" "}
+                <FooterLink href="#">
+                  <i>
+                    <span style={{ marginLeft: "10px" }}>
+                      <img
+                        src={twitter_3d.default}
+                        alt="Twitter gif"
+                        width="50"
+                        height="50"
+                      />
+                    </span>
+                  </i>
+                </FooterLink>
+              </Column>
+              <Column>
+                {" "}
+                <FooterLink href="#">
+                  <i>
+                    <span style={{ marginLeft: "10px" }}>
+                      <img
+                        src={youtube_3d.default}
+                        alt="Twitter gif"
+                        width="50"
+                        height="50"
+                      />
+                    </span>
+                  </i>
+                </FooterLink>
+              </Column>
+            </Row>
           </Column>
         </Row>
       </Container>

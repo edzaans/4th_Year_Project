@@ -21,6 +21,7 @@ app.get("/test", (req, res) => {
   res.send("Test OK!!!!!!!!");
 });
 
+// *******Post Employee DATA to database******
 app.post("/register", (req, res) => {
   const name = req.body.name;
   const lname = req.body.lname;
@@ -48,6 +49,27 @@ app.post("/register", (req, res) => {
       available,
     ],
     (err, result) => {
+      if (err) throw err;
+      console.log(result);
+    }
+  );
+});
+
+// *******Post Employer DATA to database******
+app.post("/employer_register", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const location = req.body.location;
+  const registration = req.body.registration;
+  const website = req.body.website;
+  const phone = req.body.phone;
+
+  // DB Query
+  db.query(
+    "INSERT INTO company(company_name,company_email,company_reg_num,company_website,company_phone,company_location,registration_date) VALUES(?,?,?,?,?,?,now())",
+    [name, email, registration, website, phone, location],
+    (err, result) => {
+      // Check for errors when POST
       if (err) throw err;
       console.log(result);
     }

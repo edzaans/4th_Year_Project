@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // Import Axios
 import Axios from "axios";
 // Import Styles from modules
-import Styles from "../Styles/Form.module.css";
+import Styles from "../Styles/RegistrationForm.module.css";
 
 // Import React Bootstrap
 import Container from "react-bootstrap/Container";
@@ -14,7 +14,6 @@ function UserForm() {
   const [lname, setlname] = useState("");
   const [email, setemail] = useState("");
   const [location, setlocation] = useState("");
-  const [register_date, setregister_date] = useState("");
   const [licence_cat, setlicence_cat] = useState("");
   const [qualifications, setqualifications] = useState("");
   const [penalty_points, setpenalty_points] = useState("");
@@ -29,7 +28,7 @@ function UserForm() {
       lname: lname,
       email: email,
       location: location,
-      register_date: register_date,
+
       licence_cat: licence_cat,
       qualifications: qualifications,
       penalty_points: penalty_points,
@@ -46,146 +45,179 @@ function UserForm() {
       {/* Container */}
       <Container className={Styles.container}>
         {/* Form starts here */}
+        <h2>Employee registration</h2>
         <Form>
           {/* Set user First Name */}
-          <Form.Group className={Styles.input} controlId="form.name">
-            <Form.Label>First name</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Your first name"
-              onChange={(event) => {
-                setname(event.target.value);
-              }}
-            />
-          </Form.Group>
+          <div className="row">
+            <div className="col-md-6">
+              <Form.Group className={Styles.input} controlId="form.name">
+                <Form.Label>First name</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Your first name"
+                  onChange={(event) => {
+                    setname(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+            <div className="col-md-6">
+              {/* Set user Last Name */}
+              <Form.Group className={Styles.input} controlId="form.lname">
+                <Form.Label>Last name</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Your last name"
+                  onChange={(event) => {
+                    setlname(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+          </div>
 
-          {/* Set user Last Name */}
-          <Form.Group className={Styles.input} controlId="form.lname">
-            <Form.Label>Last name</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Your last name"
-              onChange={(event) => {
-                setlname(event.target.value);
-              }}
-            />
-          </Form.Group>
+          <div className="row">
+            <div className="col-md-6">
+              {/* Set user Email */}
+              <Form.Group className={Styles.input} controlId="form.email">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  required
+                  placeholder="name@example.com"
+                  onChange={(event) => {
+                    setemail(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+            <div className="col-md-6">
+              {/* Set user Location */}
+              <Form.Group className={Styles.input} controlId="form.location">
+                <Form.Label>Your location</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Your location"
+                  onChange={(event) => {
+                    setlocation(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+          </div>
 
-          {/* Set user Email */}
-          <Form.Group className={Styles.input} controlId="form.email">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              required
-              placeholder="name@example.com"
-              onChange={(event) => {
-                setemail(event.target.value);
-              }}
-            />
-          </Form.Group>
+          <div className="row">
+            <div className="col-md-6">
+              {/* Set user Licence category */}
+              <Form.Group className={Styles.input} controlId="form.licence">
+                <Form.Label>Category held</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Licence Category held"
+                  onChange={(event) => {
+                    setlicence_cat(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+            <div className="col-md-6">
+              {/* Set user Qualifications */}
+              <Form.Group
+                className={Styles.input}
+                controlId="form.qualifications"
+              >
+                <Form.Label>Qualifications held</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Qualifications held"
+                  onChange={(event) => {
+                    setqualifications(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+          </div>
 
-          {/* Set user Location */}
-          <Form.Group className={Styles.input} controlId="form.location">
-            <Form.Label>Your location</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Your location"
-              onChange={(event) => {
-                setlocation(event.target.value);
-              }}
-            />
-          </Form.Group>
+          <div className="row">
+            <div className="col-md-6">
+              {/* Set user Penalty Points */}
+              <Form.Group className={Styles.input} controlId="form.penalty">
+                <Form.Label>Penalty Points</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Penalty points"
+                  onChange={(event) => {
+                    setpenalty_points(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+            <div className="col-md-6">
+              {/* Set user Experience */}
+              <Form.Group className={Styles.input} controlId="form.experience">
+                <Form.Label>Your experience</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Your experience"
+                  onChange={(event) => {
+                    setexperience_years(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+          </div>
 
-          {/* Set user Licence category */}
-          <Form.Group className={Styles.input} controlId="form.licence">
-            <Form.Label>Category held</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Licence Category held"
-              onChange={(event) => {
-                setlicence_cat(event.target.value);
-              }}
-            />
-          </Form.Group>
-
-          {/* Set user Qualifications */}
-          <Form.Group className={Styles.input} controlId="form.qualifications">
-            <Form.Label>Qualifications held</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Qualifications held"
-              onChange={(event) => {
-                setqualifications(event.target.value);
-              }}
-            />
-          </Form.Group>
-
-          {/* Set user Penalty Points */}
-          <Form.Group className={Styles.input} controlId="form.penalty">
-            <Form.Label>Penalty Points</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Penalty points"
-              onChange={(event) => {
-                setpenalty_points(event.target.value);
-              }}
-            />
-          </Form.Group>
-
-          {/* Set user Experience */}
-          <Form.Group className={Styles.input} controlId="form.experience">
-            <Form.Label>Your experience</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Your experience"
-              onChange={(event) => {
-                setexperience_years(event.target.value);
-              }}
-            />
-          </Form.Group>
-
-          {/* Set user Work Type */}
-          <Form.Group className={Styles.input} controlId="form.work">
-            <Form.Label>What work type youre looking for?</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Choose work type"
-              onChange={(event) => {
-                setwork_type(event.target.value);
-              }}
-            />
-          </Form.Group>
-
-          {/* Set user Availability */}
-          <Form.Group className={Styles.input} controlId="form.available">
-            <Form.Label>Availability</Form.Label>
-            <Form.Control
-              type="text"
-              required
-              placeholder="Availability"
-              onChange={(event) => {
-                setavailable(event.target.value);
-              }}
-            />
-          </Form.Group>
-
-          {/* Submit  */}
-          <Form.Group controlId="form.submit">
-            <Form.Control
-              className={Styles.btn}
-              type="submit"
-              value="Submit"
-              onClick={register}
-            />
-          </Form.Group>
+          <div className="row">
+            <div className="col-md-6">
+              {/* Set user Work Type */}
+              <Form.Group className={Styles.input} controlId="form.work">
+                <Form.Label>What work type youre looking for?</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Choose work type"
+                  onChange={(event) => {
+                    setwork_type(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+            <div className="col-md-6">
+              {" "}
+              {/* Set user Availability */}
+              <Form.Group className={Styles.input} controlId="form.available">
+                <Form.Label>Availability</Form.Label>
+                <Form.Control
+                  type="text"
+                  required
+                  placeholder="Availability"
+                  onChange={(event) => {
+                    setavailable(event.target.value);
+                  }}
+                />
+              </Form.Group>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6 mx-auto mt-3">
+              {/* Submit  */}
+              <Form.Group controlId="form.submit">
+                <Form.Control
+                  className={Styles.btn}
+                  type="submit"
+                  value="Submit"
+                  onClick={register}
+                />
+              </Form.Group>
+            </div>
+          </div>
         </Form>
       </Container>
     </div>

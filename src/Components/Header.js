@@ -9,6 +9,7 @@ import {
   Button,
 } from "react-bootstrap";
 import Styles from "../Styles/Header.module.css";
+import { Employees } from "./Employees";
 
 // mport Assets
 const logo = require("../Assets/Logo3.png");
@@ -25,7 +26,7 @@ export class Header extends React.Component {
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav className="mx-2" style={{ maxHeight: "300px" }} navbarScroll>
-                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/Home">Home</Nav.Link>
                 <Nav.Link href="/About">About</Nav.Link>
                 <Nav.Link href="/Employees">Employees</Nav.Link>
                 <Nav.Link href="/Employers">Employers</Nav.Link>

@@ -1,22 +1,21 @@
 .container {
-  margin: 0px auto;
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
-  background-color: rgb(218, 231, 231);
+  background-color: rgb(255, 255, 255);
   width: auto;
   margin-bottom: 25px;
 }
 
 .input {
   margin: 10px auto;
-  width: 50%;
+  width: 100%;
   border-radius: 1px;
 }
 
 .btn {
-  margin: 10px auto;
-  width: 50%;
+  margin: 20px auto;
+  width: 30%;
   background-color: green;
   color: aliceblue;
   border: none;

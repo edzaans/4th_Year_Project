@@ -10,9 +10,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 // Import Register
 import { Register } from "./Components/Register";
-import { Slide } from "./Components/Slide";
-import { Cards } from "./Components/Cards";
-import { Quote } from "./Components/Quote";
+
+import { Employees } from "./Components/Employees";
+import { Employers } from "./Components/Employers";
+import { Home } from "./Components/Home";
 
 function App() {
   return (
@@ -22,17 +23,14 @@ function App() {
         <Header></Header>
         {/* Add Switch for navigation */}
         <Switch>
-          <Route path="/" component="" exact></Route>
+          <Route path="/Home" component={Home} exact></Route>
           <Route path="/About" component="" exact></Route>
 
           <Route path="/Register" component={Register} exact></Route>
-          {/* <Route path="/Login" component={Login} exact></Route> */}
+          <Route path="/Employees" component={Employees} exact />
+          <Route path="/Employers" component={Employers} exact />
         </Switch>
       </div>
-      <Slide />
-      <Quote />
-      <Cards />
-      <Footer />
     </Router>
   );
 }

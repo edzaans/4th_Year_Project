@@ -5,20 +5,21 @@ export class ContactForm extends React.Component {
   render() {
     return (
       <div>
-        <div class="container">
+        <div className={Styles.container}>
           <div class=" text-center mt-3"></div>
           <div class="row ">
-            <div class="col-lg-12 mx-auto">
+            <div class="col-lg-12 mx-auto mb-2">
+              <h2 className={Styles.h2}>GET IN TOUCH</h2>
               <div class="card  mx-auto p-2 bg-light">
                 <div class="card-body bg-light">
                   <div class="container">
                     <form id="contact-form" role="form">
                       <div class="controls">
                         <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-6 mb-3">
                             <div class="form-group">
                               {" "}
-                              <label for="form_name">First Name *</label>{" "}
+                              {/* <label for="form_name">First Name *</label>{" "} */}
                               <input
                                 id="form_name"
                                 type="text"
@@ -30,12 +31,12 @@ export class ContactForm extends React.Component {
                               />{" "}
                             </div>
                           </div>
-                          <div class="col-md-12">
+                          <div class="col-md-6">
                             <div class="form-group">
                               {" "}
-                              <label for="form_lastname">
+                              {/*  <label for="form_lastname">
                                 Last Name *
-                              </label>{" "}
+                              </label>{" "} */}
                               <input
                                 id="form_lastname"
                                 type="text"
@@ -49,10 +50,10 @@ export class ContactForm extends React.Component {
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-6">
                             <div class="form-group">
                               {" "}
-                              <label for="form_email">Email *</label>{" "}
+                              {/*  <label for="form_email">Email *</label>{" "} */}
                               <input
                                 id="form_email"
                                 type="email"
@@ -64,12 +65,12 @@ export class ContactForm extends React.Component {
                               />{" "}
                             </div>
                           </div>
-                          <div class="col-md-12">
+                          <div class="col-md-6">
                             <div class="form-group">
                               {" "}
-                              <label for="form_need">
+                              {/*   <label for="form_need">
                                 Please specify your need *
-                              </label>{" "}
+                              </label>{" "} */}
                               <select
                                 id="form_need"
                                 name="need"
@@ -78,21 +79,21 @@ export class ContactForm extends React.Component {
                                 data-error="Please specify your need."
                               >
                                 <option value="" selected disabled>
-                                  --Select Your Issue--
+                                  --Select Your Request--
                                 </option>
-                                <option>Request Invoice for order</option>
-                                <option>Request order status</option>
-                                <option>Haven't received cashback yet</option>
+                                <option>Request Quote</option>
+                                <option>Request Info</option>
+                                <option>Request Callback</option>
                                 <option>Other</option>
                               </select>{" "}
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-12 mt-3">
                             <div class="form-group">
                               {" "}
-                              <label for="form_message">Message *</label>{" "}
+                              {/*    <label for="form_message">Message *</label>{" "} */}
                               <textarea
                                 id="form_message"
                                 name="message"
@@ -104,7 +105,7 @@ export class ContactForm extends React.Component {
                               ></textarea>{" "}
                             </div>
                           </div>
-                          <div class="col-md-12">
+                          <div class="col-md-12 text-center">
                             {" "}
                             <input
                               type="submit"

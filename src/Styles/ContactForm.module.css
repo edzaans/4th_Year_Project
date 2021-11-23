@@ -2,10 +2,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-h1 {
-  margin-bottom: 40px;
-}
-
 label {
   color: #333;
 }
@@ -26,4 +22,19 @@ label {
 .card {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.container {
+  background-color: rgb(243, 243, 243);
+  width: auto;
+  height: auto;
+
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.h2 {
+  padding: 30px 0px;
+  font-weight: 700;
+  text-align: center;
 }

@@ -15,7 +15,7 @@ export class Quote extends React.Component {
       <div>
         <Container fluid className={Styles.container}>
           <Row>
-            <Col md={6} sm={12}>
+            <Col md={12} sm={12}>
               <h2>WHAT WE OFFER</h2>
               <Row>
                 <Col md={6}>
@@ -80,12 +80,6 @@ export class Quote extends React.Component {
                   </div>
                 </Col>
               </Row>
-            </Col>
-
-            {/* Quote column starts here */}
-            <Col md={6} sm={12}>
-              <h2>REQUEST A QUICK QUOTE</h2>
-              <ContactForm />
             </Col>
           </Row>
         </Container>
