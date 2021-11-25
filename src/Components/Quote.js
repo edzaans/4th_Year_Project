@@ -18,9 +18,9 @@ export class Quote extends React.Component {
             <Col md={12} sm={12}>
               <h2>WHAT WE OFFER</h2>
               <Row>
-                <Col md={6}>
+                <Col md={6} className={Styles.col}>
                   <div>
-                    <span>
+                    <span className={Styles.icon}>
                       <FiPackage />
                     </span>
                     <h5>Packaging And Storage</h5>
@@ -32,7 +32,7 @@ export class Quote extends React.Component {
                     </p>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} className={Styles.col}>
                   <div>
                     <span>
                       <RiTruckLine />
@@ -51,7 +51,7 @@ export class Quote extends React.Component {
               {/* Second row */}
 
               <Row>
-                <Col md={6}>
+                <Col md={6} className={Styles.col}>
                   <div>
                     <span>
                       <BsDoorOpen />
@@ -65,7 +65,7 @@ export class Quote extends React.Component {
                     </p>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} className={Styles.col}>
                   <div>
                     <span>
                       <GiRoad />

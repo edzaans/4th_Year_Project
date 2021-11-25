@@ -19,16 +19,8 @@ label {
   margin-top: 5px;
 }
 
-.card {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 .container {
-  background-color: rgb(243, 243, 243);
-  width: auto;
-  height: auto;
-
+  background-color: rgb(206, 192, 192);
   align-items: center;
   padding: 50px 0px;
 }
@@ -37,4 +29,8 @@ label {
   padding: 30px 0px;
   font-weight: 700;
   text-align: center;
+}
+
+.contact_p {
+  padding: 0px 20px;
 }

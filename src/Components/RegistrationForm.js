@@ -35,9 +35,11 @@ function UserForm() {
       experience_years: experience_years,
       work_type: work_type,
       available: available,
-    }).then((response) => {
-      console.log(response);
+    }).then((result) => {
+      alert("Posted");
+      console.log(result);
     });
+    console.log("This came from employee form");
   };
 
   return (

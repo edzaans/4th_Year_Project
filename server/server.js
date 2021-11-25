@@ -1,10 +1,31 @@
-const express = require("express");
 const mysql = require("mysql");
-const cors = require("cors");
-
+// Add EXPRESS
+const express = require("express");
+// Assign body-parser to variable
+const bodyParser = require("body-parser");
+// Set app to run EXPRESS
 const app = express();
-app.use(express.json());
+
+// Add CORS
+const cors = require("cors");
+// Set app to use CORS
 app.use(cors());
+// Set up HEADERS to be used by CORS
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 const db = mysql.createConnection({
   user: "Edgars",
@@ -50,7 +71,8 @@ app.post("/register", (req, res) => {
     ],
     (err, result) => {
       if (err) throw err;
-      console.log(result);
+      res.send(result);
+      console.log("User added : " + req.body.name);
     }
   );
 });
@@ -72,6 +94,36 @@ app.post("/employer_register", (req, res) => {
       // Check for errors when POST
       if (err) throw err;
       console.log(result);
+    }
+  );
+});
+
+// *******Login with NAME and EMAIL params******
+app.post("/login", (req, res) => {
+  const { username, email } = req.body;
+  const values = [username, email];
+
+  // DB Query
+  db.query(
+    "Select * FROM users where first_name = ? AND email = ?",
+    values,
+    (err, result) => {
+      // Check for errors when POST
+      if (err) {
+        res.send("Error from server file");
+      }
+      //Check if data came back, send back in OBJECT(assign values)
+      if (result.length > 0) {
+        res.send({
+          id: result[0].id,
+          name: result[0].first_name,
+          email: result[0].email,
+        });
+        console.log(result[0]);
+      } else {
+        res.send({ message: "No user found with given credentials!!!" });
+        console.log("No user with that name/email combo");
+      }
     }
   );
 });

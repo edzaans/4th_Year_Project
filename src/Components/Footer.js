@@ -10,7 +10,7 @@ import {
   Heading,
 } from "./FooterStyles";
 
-// Import Icon name to be used ( use as a component in code )
+/* // Import Icon name to be used ( use as a component in code )
 import { FaFacebookSquare } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillTwitterSquare } from "react-icons/ai";
@@ -20,7 +20,7 @@ import { AiFillYoutube } from "react-icons/ai";
 const fbIcon = { color: "#4267B2", fontSize: "1.5rem" };
 const instaIcon = { color: "yellow", fontSize: "1.5rem" };
 const twitterIcon = { color: "aqua", fontSize: "1.5rem" };
-const youtubeIcon = { color: "red", fontSize: "1.5rem" };
+const youtubeIcon = { color: "red", fontSize: "1.5rem" }; */
 
 // Importing assets
 

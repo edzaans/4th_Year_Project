@@ -6,118 +6,97 @@ export class ContactForm extends React.Component {
     return (
       <div>
         <div className={Styles.container}>
-          <div class=" text-center mt-3"></div>
+          <div class=" text-center "></div>
           <div class="row ">
-            <div class="col-lg-12 mx-auto mb-2">
+            <div class="col-lg-12 mx-auto">
               <h2 className={Styles.h2}>GET IN TOUCH</h2>
-              <div class="card  mx-auto p-2 bg-light">
-                <div class="card-body bg-light">
-                  <div class="container">
-                    <form id="contact-form" role="form">
-                      <div class="controls">
-                        <div class="row">
-                          <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                              {" "}
-                              {/* <label for="form_name">First Name *</label>{" "} */}
-                              <input
-                                id="form_name"
-                                type="text"
-                                name="name"
-                                class="form-control"
-                                placeholder="Please enter your first name"
-                                required="required"
-                                data-error="Firstname is required."
-                              />{" "}
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              {" "}
-                              {/*  <label for="form_lastname">
-                                Last Name *
-                              </label>{" "} */}
-                              <input
-                                id="form_lastname"
-                                type="text"
-                                name="surname"
-                                class="form-control"
-                                placeholder="Please enter your last name"
-                                required="required"
-                                data-error="Lastname is required."
-                              />{" "}
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              {" "}
-                              {/*  <label for="form_email">Email *</label>{" "} */}
-                              <input
-                                id="form_email"
-                                type="email"
-                                name="email"
-                                class="form-control"
-                                placeholder="Please enter your email "
-                                required="required"
-                                data-error="Valid email is required."
-                              />{" "}
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              {" "}
-                              {/*   <label for="form_need">
-                                Please specify your need *
-                              </label>{" "} */}
-                              <select
-                                id="form_need"
-                                name="need"
-                                class="form-control"
-                                required="required"
-                                data-error="Please specify your need."
-                              >
-                                <option value="" selected disabled>
-                                  --Select Your Request--
-                                </option>
-                                <option>Request Quote</option>
-                                <option>Request Info</option>
-                                <option>Request Callback</option>
-                                <option>Other</option>
-                              </select>{" "}
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-12 mt-3">
-                            <div class="form-group">
-                              {" "}
-                              {/*    <label for="form_message">Message *</label>{" "} */}
-                              <textarea
-                                id="form_message"
-                                name="message"
-                                class="form-control"
-                                placeholder="Write your message here."
-                                rows="4"
-                                required="required"
-                                data-error="Please, leave us a message."
-                              ></textarea>{" "}
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            {" "}
-                            <input
-                              type="submit"
-                              class="btn btn-success btn-send mt-3 btn-block "
-                              value="Send Message"
-                            />{" "}
-                          </div>
+              <div className="row">
+                <div className="col-md-6 mx-auto">
+                  <p className={Styles.contact_p}>
+                    We thrive when coming up with innovative ideas but also
+                    understand that a smart concept should be supported with
+                    measurable results.
+                  </p>
+                </div>
+              </div>
+
+              <div class="container">
+                <form id="contact-form" role="form">
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                          {" "}
+                          <input
+                            id="form_name"
+                            type="text"
+                            name="name"
+                            class="form-control"
+                            placeholder="Your name*"
+                            required="required"
+                            data-error="Name is required."
+                          />{" "}
                         </div>
                       </div>
-                    </form>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          {" "}
+                          {/*  <label for="form_email">Email *</label>{" "} */}
+                          <input
+                            id="form_email"
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Your email* "
+                            required="required"
+                            data-error="Valid email is required."
+                          />{" "}
+                        </div>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <div class="form-group">
+                          {" "}
+                          <input
+                            id="form_subject"
+                            type="text"
+                            name="subject"
+                            class="form-control"
+                            placeholder="Your subject* "
+                            required="required"
+                            data-error="Subject entry is required."
+                          />{" "}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 mt-3">
+                        <div class="form-group">
+                          {" "}
+                          {/*    <label for="form_message">Message *</label>{" "} */}
+                          <textarea
+                            id="form_message"
+                            name="message"
+                            class="form-control"
+                            placeholder="Write your message here."
+                            rows="4"
+                            required="required"
+                            data-error="Please, leave us a message."
+                          ></textarea>{" "}
+                        </div>
+                      </div>
+                      <div class="col-md-12 text-center">
+                        {" "}
+                        <input
+                          type="submit"
+                          class="btn btn-success btn-send mt-3 btn-block "
+                          value="Send Message"
+                        />{" "}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

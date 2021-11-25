@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import Styles from "../Styles/Header.module.css";
-import { Employees } from "./Employees";
 
 // mport Assets
 const logo = require("../Assets/Logo3.png");
@@ -30,6 +21,7 @@ export class Header extends React.Component {
                 <Nav.Link href="/About">About</Nav.Link>
                 <Nav.Link href="/Employees">Employees</Nav.Link>
                 <Nav.Link href="/Employers">Employers</Nav.Link>
+                <Nav.Link href="/Jobs">Jobs</Nav.Link>
 
                 <Nav.Link href="/Register">Register</Nav.Link>
                 <Nav.Link href="/Login">Login</Nav.Link>

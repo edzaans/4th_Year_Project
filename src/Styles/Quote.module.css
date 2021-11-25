@@ -1,5 +1,5 @@
 .container {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(231, 219, 219);
   width: auto;
   height: auto;
   text-align: center;
@@ -18,4 +18,12 @@
 
 .container span {
   font-size: 2rem;
+}
+
+.col:hover {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: rgb(10, 88, 99);
+  text-shadow: 1px 1px 2px rgb(252, 246, 246);
+  transition: all 0.5s ease-in-out;
 }
