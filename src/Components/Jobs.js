@@ -11,6 +11,8 @@ function Jobs() {
   // Set JOBS state
   const [jobs, setjobs] = useState({ location: "", description: "" });
 
+  const test = [{ name: "test" }, { name: "test2" }];
+
   // On submit when button is pressed
   const onSubmit = (e) => {
     e.preventDefault();
@@ -23,19 +25,29 @@ function Jobs() {
           location: data.location,
           description: data.description,
         });
+        const jobs = [data];
+        /*  console.log(data); */
 
-        console.log(data);
+        console.log(jobs[0].result[0]);
+        console.log(jobs[0].result[1]);
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+  // Test function
+  const showAll = (e) => {
+    e.preventDefault();
+    {
+      test.map((el) => <p>{el.name}</p>);
+    }
   };
 
   return (
     <div>
       <Container>
         <h2>Jobs Listing</h2>
-        <button onClick={onSubmit}>All jobs</button>
+        <button onClick={onSubmit}>Load Jobs</button>
 
         <table class="table table-dark">
           <thead>
@@ -44,13 +56,12 @@ function Jobs() {
               <th scope="col">Description</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>{jobs.location}</td>
-              <td>{jobs.description}</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
+
+        {test.map((el) => (
+          <p>{el.name}</p>
+        ))}
       </Container>
     </div>
   );

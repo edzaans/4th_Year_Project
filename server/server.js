@@ -132,8 +132,9 @@ app.post("/login", (req, res) => {
 app.get("/jobs", (req, res) => {
   db.query("SELECT * From job_post", (err, result) => {
     res.send({
-      location: result[0].job_location,
-      description: result[0].job_description,
+      /*  location: result[0].job_location,
+      description: result[0].job_description, */
+      result,
     });
     console.log(result);
   });
