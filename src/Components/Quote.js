@@ -1,7 +1,6 @@
 import React from "react";
 import Styles from "../Styles/Quote.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { ContactForm } from "./ContactForm";
 
 // Import Icon name to be used ( use as a component in code )
 import { FiPackage } from "react-icons/fi";
@@ -13,18 +12,18 @@ export class Quote extends React.Component {
   render() {
     return (
       <div>
-        <Container fluid className={Styles.container}>
+        <Container fluid className={Styles.quote_container}>
           <Row>
             <Col md={12} sm={12}>
               <h2>WHAT WE OFFER</h2>
-              <Row>
-                <Col md={6} className={Styles.col}>
+              <Row className="my-5">
+                <Col md={6} className={Styles.quote_col}>
                   <div>
-                    <span className={Styles.icon}>
-                      <FiPackage />
+                    <span>
+                      <FiPackage className={Styles.quote_icon} />
                     </span>
-                    <h5>Packaging And Storage</h5>
-                    <p>
+                    <h4>Packaging And Storage</h4>
+                    <p className={Styles.quote_p}>
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Praesentium, culpa excepturi amet exercitationem in
                       adipisci! Non beatae ullam dolores, ad voluptas quas. Ad
@@ -32,13 +31,13 @@ export class Quote extends React.Component {
                     </p>
                   </div>
                 </Col>
-                <Col md={6} className={Styles.col}>
+                <Col md={6} className={Styles.quote_col}>
                   <div>
                     <span>
-                      <RiTruckLine />
+                      <RiTruckLine className={Styles.quote_icon} />
                     </span>
-                    <h5>Nation Wide Transport</h5>
-                    <p>
+                    <h4>Nation Wide Transport</h4>
+                    <p className={Styles.quote_p}>
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Praesentium, culpa excepturi amet exercitationem in
                       adipisci! Non beatae ullam dolores, ad voluptas quas. Ad
@@ -50,14 +49,14 @@ export class Quote extends React.Component {
 
               {/* Second row */}
 
-              <Row>
-                <Col md={6} className={Styles.col}>
+              <Row className="my-5">
+                <Col md={6} className={Styles.quote_col}>
                   <div>
                     <span>
-                      <BsDoorOpen />
+                      <BsDoorOpen className={Styles.quote_icon} />
                     </span>
-                    <h5>Door To Door Deliveries</h5>
-                    <p>
+                    <h4>Door To Door Deliveries</h4>
+                    <p className={Styles.quote_p}>
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Praesentium, culpa excepturi amet exercitationem in
                       adipisci! Non beatae ullam dolores, ad voluptas quas. Ad
@@ -65,13 +64,13 @@ export class Quote extends React.Component {
                     </p>
                   </div>
                 </Col>
-                <Col md={6} className={Styles.col}>
+                <Col md={6} className={Styles.quote_col}>
                   <div>
                     <span>
-                      <GiRoad />
+                      <GiRoad className={Styles.quote_icon} />
                     </span>
-                    <h5>Ground Transport</h5>
-                    <p>
+                    <h4>Ground Transport</h4>
+                    <p className={Styles.quote_p}>
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Praesentium, culpa excepturi amet exercitationem in
                       adipisci! Non beatae ullam dolores, ad voluptas quas. Ad

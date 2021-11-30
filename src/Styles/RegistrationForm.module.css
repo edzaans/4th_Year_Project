@@ -1,23 +1,42 @@
-.container {
+.registration_container {
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(252, 252, 252);
   width: auto;
   margin-bottom: 25px;
 }
 
-.input {
+.reg_input {
   margin: 10px auto;
-  width: 100%;
+  width: 80%;
   border-radius: 1px;
+  box-shadow: 7px 10px 10px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  transform: scale(1.01);
 }
 
-.btn {
-  margin: 20px auto;
-  width: 30%;
-  background-color: green;
-  color: aliceblue;
+.test {
+  background-color: rgb(255, 255, 255);
+}
+
+.reg_btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 5px;
+  margin: 20px 0;
   border: none;
+  cursor: pointer;
   border-radius: 5px;
+  width: 25%;
+  margin: 20px auto;
+}
+
+.reg_btn:hover {
+  box-shadow: 5px 10px 5px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  transform: scale(1.01);
+}
+
+.reg_container {
+  padding: 50px 0px;
+  margin-bottom: auto;
 }

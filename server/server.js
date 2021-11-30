@@ -28,9 +28,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  user: "Edgars",
+  user: "root",
   host: "localhost",
-  password: "admin",
+  password: "",
   database: "react_test",
 });
 

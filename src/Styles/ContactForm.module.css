@@ -1,36 +1,46 @@
-body {
-  font-family: "Lato", sans-serif;
-}
-
 label {
   color: #333;
 }
 
-.btn-send {
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  width: 80%;
-  margin-left: 3px;
-}
-
 .help-block.with-errors {
-  color: #ff5050;
+  color: #d40c0c;
   margin-top: 5px;
 }
 
 .container {
-  background-color: rgb(206, 192, 192);
+  background-color: rgb(255, 255, 255);
   align-items: center;
   padding: 50px 0px;
 }
 
-.h2 {
-  padding: 30px 0px;
+.contact_h2 {
   font-weight: 700;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .contact_p {
   padding: 0px 20px;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.contact_btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 5px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact_btn:hover {
+  box-shadow: 5px 10px 5px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  transform: scale(1.01);
+}
+
+.contact_input {
+  box-shadow: 5px 10px 5px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  transform: scale(1.01);
 }

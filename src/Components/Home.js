@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Slide } from "./Slide";
 import { Quote } from "./Quote";
 import { ContactForm } from "./ContactForm";

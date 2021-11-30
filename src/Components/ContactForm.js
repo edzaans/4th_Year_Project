@@ -6,10 +6,9 @@ export class ContactForm extends React.Component {
     return (
       <div>
         <div className={Styles.container}>
-          <div class=" text-center "></div>
           <div class="row ">
             <div class="col-lg-12 mx-auto">
-              <h2 className={Styles.h2}>GET IN TOUCH</h2>
+              <h2 className={Styles.contact_h2}>GET IN TOUCH</h2>
               <div className="row">
                 <div className="col-md-6 mx-auto">
                   <p className={Styles.contact_p}>
@@ -28,6 +27,7 @@ export class ContactForm extends React.Component {
                         <div class="form-group">
                           {" "}
                           <input
+                            className={Styles.contact_input}
                             id="form_name"
                             type="text"
                             name="name"
@@ -90,7 +90,8 @@ export class ContactForm extends React.Component {
                         {" "}
                         <input
                           type="submit"
-                          class="btn btn-success btn-send mt-3 btn-block "
+                          class="btn btn-success"
+                          className={Styles.contact_btn}
                           value="Send Message"
                         />{" "}
                       </div>

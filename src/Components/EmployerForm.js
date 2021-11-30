@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // Import Axios
 import Axios from "axios";
 // Import Styles from modules
-import Styles from "../Styles/RegistrationForm.module.css";
+import Styles from "../Styles/EmployerForm.module.css";
 
 // Import React Bootstrap
 import Container from "react-bootstrap/Container";
@@ -34,16 +34,17 @@ function EmployerForm() {
   return (
     <div>
       {/* Container */}
-      <Container className={Styles.container}>
+      <Container className={Styles.emp_container}>
         {/* Form starts here */}
-        <h2>Employer registration</h2>
+        <h2 className="mb-5">Employer registration</h2>
         <Form>
           {/* Set Company Name */}
           <div className="row">
             <div className="col-md-6">
-              <Form.Group className={Styles.input} controlId="form.name">
+              <Form.Group controlId="form.name">
                 <Form.Label>Company Name</Form.Label>
                 <Form.Control
+                  className={Styles.emp_input}
                   type="text"
                   required
                   placeholder="Company name"
@@ -56,9 +57,10 @@ function EmployerForm() {
 
             <div className="col-md-6">
               {/* Set user Location */}
-              <Form.Group className={Styles.input} controlId="form.location">
+              <Form.Group controlId="form.location">
                 <Form.Label>Company location</Form.Label>
                 <Form.Control
+                  className={Styles.emp_input}
                   type="text"
                   required
                   placeholder="Your location"
@@ -73,9 +75,10 @@ function EmployerForm() {
           <div className="row">
             <div className="col-md-6">
               {/* Set user Email */}
-              <Form.Group className={Styles.input} controlId="form.email">
+              <Form.Group controlId="form.email">
                 <Form.Label>Company email</Form.Label>
                 <Form.Control
+                  className={Styles.emp_input}
                   type="email"
                   required
                   placeholder="name@example.com"
@@ -88,12 +91,10 @@ function EmployerForm() {
 
             <div className="col-md-6">
               {/* Set Company Reg Number */}
-              <Form.Group
-                className={Styles.input}
-                controlId="form.registration"
-              >
+              <Form.Group controlId="form.registration">
                 <Form.Label>Company Registration Nr</Form.Label>
                 <Form.Control
+                  className={Styles.emp_input}
                   type="text"
                   required
                   placeholder="Registration Nr"
@@ -108,9 +109,10 @@ function EmployerForm() {
           <div className="row">
             <div className="col-md-6">
               {/* Set Company Website */}
-              <Form.Group className={Styles.input} controlId="form.website">
+              <Form.Group controlId="form.website">
                 <Form.Label>Company website</Form.Label>
                 <Form.Control
+                  className={Styles.emp_input}
                   type="text"
                   required
                   placeholder="Your experience"
@@ -122,9 +124,10 @@ function EmployerForm() {
             </div>
             <div className="col-md-6">
               {/* Set Company Phwone Number */}
-              <Form.Group className={Styles.input} controlId="form.phone">
+              <Form.Group controlId="form.phone">
                 <Form.Label>Company Phone number</Form.Label>
                 <Form.Control
+                  className={Styles.emp_input}
                   type="text"
                   required
                   placeholder="Company Phone nr"
@@ -136,11 +139,11 @@ function EmployerForm() {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-6 mx-auto mt-3">
+            <div className="col-md-12 col-sm-12 mx-auto mt-3">
               {/* Submit  */}
               <Form.Group controlId="form.submit">
                 <Form.Control
-                  className={Styles.btn}
+                  className={Styles.emp_btn}
                   type="submit"
                   value="Submit"
                   onClick={employer_register}

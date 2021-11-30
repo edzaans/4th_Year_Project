@@ -3,14 +3,16 @@ import React, { useState } from "react";
 import Axios from "axios";
 import Styles from "../Styles/Login.module.css";
 import { Form, Container } from "react-bootstrap";
+import { Redirect } from "react-router-dom";
 
 function LoginForm() {
   // Set state for login details
   const [body, setbody] = useState({ username: "", email: "" });
   // Set message to server response
   const [loginStatus, setloginStatus] = useState({
-    greeting: "",
+    greeting: "Please Log In",
     user: "",
+    authorized: false,
   });
 
   // Set body sate with values entered in form
@@ -29,8 +31,13 @@ function LoginForm() {
       .then(({ data }) => {
         // Check if data returned has value, display value
         if (data.name) {
-          setloginStatus({ greeting: "Welcome ", user: data.name });
+          setloginStatus({
+            greeting: "Welcome ",
+            user: data.name,
+            authorized: true,
+          });
           console.log(data.name);
+          console.log(loginStatus);
           // If data returned empty, set state with error
         } else {
           setloginStatus({ greeting: "Incorrect credentials", user: "" });
@@ -50,8 +57,8 @@ function LoginForm() {
         <Form>
           {/* Set user First Name */}
           <div className="row">
-            <div className="col-md-6">
-              <Form.Group className={Styles.input} controlId="form.name">
+            <div className="col-md-12 col-sm-12">
+              <Form.Group className={Styles.login_input} controlId="form.name">
                 <Form.Label>First name</Form.Label>
                 <Form.Control
                   type="text"
@@ -62,11 +69,8 @@ function LoginForm() {
                   name="username"
                 />
               </Form.Group>
-            </div>
-
-            <div className="col-md-6">
               {/* Set user Email */}
-              <Form.Group className={Styles.input} controlId="form.email">
+              <Form.Group className={Styles.login_input} controlId="form.email">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
@@ -77,16 +81,12 @@ function LoginForm() {
                   name="email"
                 />
               </Form.Group>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-6 mx-auto mt-3">
               {/* Submit  */}
               <Form.Group controlId="form.submit">
                 <Form.Control
-                  className={Styles.btn}
+                  className={Styles.login_btn}
                   type="submit"
+                  value="Log In"
                   onClick={onSubmit}
                 />
               </Form.Group>

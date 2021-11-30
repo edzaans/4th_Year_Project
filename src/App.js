@@ -5,10 +5,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // Import Header Component
 import { Header } from "./Components/Header";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-// Import Register
-import { Register } from "./Components/Register";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { Employees } from "./Components/Employees";
 import { Employers } from "./Components/Employers";
@@ -16,6 +13,9 @@ import { Home } from "./Components/Home";
 import LoginForm from "./Components/LoginForm";
 import Jobs from "./Components/Jobs";
 import FetchJobs from "./Components/FetchJobs";
+
+//Import testing Profile page that is protected
+import Profile from "./Components/Pofile";
 
 function App() {
   return (
@@ -32,6 +32,11 @@ function App() {
 
           <Route path="/Employees" component={Employees} exact />
           <Route path="/Employers" component={Employers} exact />
+          <Route
+            path="/Profile"
+            component={() => <Profile authorized={false} />}
+            exact
+          />
         </Switch>
       </div>
     </Router>

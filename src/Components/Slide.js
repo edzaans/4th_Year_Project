@@ -11,7 +11,7 @@ export class Slide extends React.Component {
   render() {
     return (
       <div>
-        <Carousel fade>
+        <Carousel fade fluid>
           <Carousel.Item>
             <Image
               className={Styles.photo}
